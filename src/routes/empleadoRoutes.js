@@ -31,7 +31,7 @@ router.put('/update/:id', authMiddleware, upload.single('imagen'), updateEmplead
 router.delete('/delete/:id', authMiddleware, deleteEmpleado)
 router.get('/', authMiddleware, getAllEmpleados)
 router.get('/empleado/:id', authMiddleware, getEmpleadoById)
-router.get('/rol/:id', authMiddleware, getEmpleadoByRol)
+router.get('/rol/:rol', authMiddleware, getEmpleadoByRol)
 router.get('/usuario/:usuario', authMiddleware, getEmpleadoByUsername)
 
 export default router

@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 
-import { getEmpleadoByUsername } from './empleadoController'
+import { getEmpleadoByUsername } from './empleadoController.js'
 
 export const login = async (req, res) => {
   const { usuario, password } = req.body
