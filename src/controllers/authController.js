@@ -26,14 +26,14 @@ export const login = async (req, res) => {
     }
 
     const token = jwt.sign(
-    {
-      userId: user.id,
-      role: user.rol,
-    },
-    process.env.JWT_SECRET,
-    { 
-      expiresIn: '2h' 
-    }
+      {
+        userId: user.id,
+        role: user.rol,
+      },
+      process.env.JWT_SECRET,
+      { 
+        expiresIn: '2h' 
+      }
     )
     return res.json({ token })
   } catch (error) {
